@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <div class="container">
+
+        <h1>Password Generator </h1>  
+
+        <span data-copyMsg></span>    <!--//here custom attribute is used to acces this span [data-copyMsg]--> 
+        <div class="display-container">
+            <input readonly placeholder="Password" data-passwordDisplay> <!--//here [data-passwordDisplay] is costum attribute-->
+
+            <button class="alter" data-copy>
+                <img src="Screenshot 2025-02-01 212632.png" alt="Copy" width="20px" height="20px">
+            </button>
+        </div>
+
+        <div class="input-container">
+
+            <div class="length-container">
+                <p>Password Length</p>
+                <p data-lengthNumber>0</p>
+            </div>
+
+            <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
+
+
+            <!-- 4 checkboxes -->
+            <div>
+                <input type="checkbox" id="uppercase">
+                <label class="checkbox-wrapper" for="uppercase">For Uppercase Letters</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="lowercase">
+                <label class="checkbox-wrapper" for="lowercase">For Lowercase Letters</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="numbers">
+                <label class="checkbox-wrapper" for="numbers">For Numbers</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="symbols">
+                <label class="checkbox-wrapper" for="symbols">For Symbols</label>
+            </div>
+
+            <!-- strength section -->
+            <div class="strength-container" style="display: flex; justify-content: space-around; align-items: center;">
+                <p>Strength</p>
+                <div data-indicator style="width: 25px ; height: 25px; border-radius: 50%; background-color: #fff;"></div>
+
+            </div>
+
+            <!-- Password button -->
+            <button class="generateButton">Generate Password</button>
+        </div>
+
+    </div>
+     
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    background: linear-gradient(to top right , rgb(211, 105, 169),rgb(111, 30, 86));
+}
+
+.container{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.442);
+    margin: 16vh 32.5vw;
+    border-radius: 5vh;
+    width: 35vw;
+    align-items: center;
+    flex-direction: column;
+}
+.container>h1{
+    height: 8vh;
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    text-shadow: 2px 2px 2px rgb(211, 105, 169);
+    align-items: center;
+    border-radius: 2vw;
+}
+
+.display-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 25vw;
+    background-color: rgba(231, 173, 219, 0.375);
+    height: 7vh;
+    border-radius: 2vw;
+}
+.display-container>[data-passwordDisplay]{
+    background-color: rgba(231, 173, 219, 0.375);
+    padding-top: 3px;
+    color: black;
+    font-weight: bolder;
+    width: 18vw;
+    height: 4.5vh;
+    border: none;
+    border-radius: 5px;
+}
+::placeholder{
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.799) ;
+    border: none;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vh;
+    padding: 2vh;
+}
+.display-container>.alter{
+    height: 5vh;
+    width: 5vh;
+    display: flex;
+    background-color: rgba(231, 173, 219, 0.375);
+    justify-content: center;
+    border: 1px white;
+    position: relative;
+    border-radius: 5px;
+    align-items: center;
+}
+.display-container>.alter>img{
+    height: 25px;
+    width: 25px;
+    position: static;
+    background-color: transparent;
+    mix-blend-mode: multiply;
+}
+
+.input-container{
+    background-color: rgba(231, 173, 219, 0.375);
+    margin: 22px;
+    width: 25vw;
+    border-radius: 10px;
+}
+.length-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(231, 173, 219, 0.375);
+    width: 23vw;
+    height: 5vh;
+    font-size: 20px;
+    height: 5vh;
+    margin:2vh 1vw;
+    border-radius: 5px;
+}
+.length-container>p{
+    margin: 0 20px;
+}
+.slider{
+    width: 20vw;
+    -webkit-appearance: none;
+    -webkit-transition:.1s ;
+    transition: opacity .1s;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1vh 2.35vw ;
+    background: white;
+    opacity: 0.7;
+    color: pink;
+}
+.slider:hover{
+    opacity: 1;
+}
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #d369a9;
+    cursor: pointer;
+}
+.slider::-moz-range-thumb{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #d369a9;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+.checkbox-wrapper {
+    display: inline-block;
+    position: relative;
+    padding-left: 45px;
+    padding-left: 3vw;
+    margin-top: 1vh;
+    cursor: pointer;
+    font-size: 16px;
+}
+.checkbox-wrapper::before {
+    content: "";
+    position: absolute;
+    margin-left: 1vw;
+    left: 0;
+    top: 0px;
+    width: 20px;
+    height: 20px;
+    background-color: #d369a9;
+    border-radius: 5px;
+}
+input[type="checkbox"]:checked + .checkbox-wrapper::before {
+    margin-left: 1vw;
+    background-color: #fff;
+    border-color: #fff;
+}
+input[type="checkbox"]:checked + .checkbox-wrapper::after {
+    content: "✓";
+    margin-left: 1vw;
+    position: absolute;
+    left: 5px;
+    top: -3px;
+    font-size: 18px;
+    color:#d369a9;
+}
+
+.generateButton{
+    width: 15vw;
+    height: 5vh;
+    margin: 0vh 5vw 2.5vh 5vw;
+    color: white;
+    background: #d369a9;
+    border: none;
+    border-radius: 10px ;
+    font-size: 2vh;
+    text-shadow: 2px 2px 2px black;
+    font-weight: 400;
+    box-shadow: 0px 5px 0px rgba(231, 173, 219, 0.675);
+
+}
+
+.active{
+    color: white;
+    width: 3vw;
+    border-radius: 5px ;
+    top: -100px;
+    margin-left: 20vw;
+    left:-20vw;
+    height: -20px;
+    border: 1px ;
+    background-color: rgba(231, 173, 219, 0.375);
+}
